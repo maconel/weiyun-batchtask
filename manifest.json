@@ -1,0 +1,27 @@
+{
+	"manifest_version": 2,
+	"name": "weiyun-batchtask",
+	"version": "1.0.0",
+	"description": "微云自动批量添加下载任务工具",
+	"icons":
+	{
+		"16": "icon-16.png",
+		"48": "icon-48.png",
+		"128": "icon-100.png"
+	},
+	"browser_action": 
+	{
+		"default_icon": "icon-16.png",
+		"default_title": "微云自动批量添加下载任务工具"
+	},
+	"content_scripts": 
+	[
+		{
+			"matches": ["https://www.weiyun.com/disk/*"],
+			"js": ["weiyun-batchtask.js"],
+			"run_at": "document_start"
+		}
+	],
+	"web_accessible_resources": ["weiyun-batchtask.js"],
+	"homepage_url": "https://www.weiyun.com"
+}
