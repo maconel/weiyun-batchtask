@@ -1,14 +1,11 @@
-// ==UserScript==
-// @name         WeiyunOfflineDownload
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
-// @author       You
-// @match        https://www.weiyun.com/disk
-// @grant        none
-// ==/UserScript==
 
 var url = "";
+
+(function() {
+    document.addEventListener('DOMContentLoaded', function() {
+        addDownloadDiv();
+    });
+})();
 
 var addDownloadDiv = function() {
     var onload = setTimeout(function(){
@@ -147,12 +144,3 @@ var clickNextButton = function() {
         }, 10);
     }, 10);
 };
-
-(function() {
-    'use strict';
-
-    // Your code here...
-    document.addEventListener('DOMContentLoaded', function() {
-        addDownloadDiv();
-    });
-})();
