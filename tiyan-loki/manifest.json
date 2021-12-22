@@ -1,0 +1,28 @@
+{
+	"manifest_version": 2,
+	"name": "tiyan-loki",
+	"version": "1.0.0",
+	"description": "洛基（英语：Loki），美国《漫威漫画》（旧译惊奇漫画）创造的虚拟漫画角色，是雷神的养弟，性格亦正亦邪，故既是超级反派亦是反英雄。",
+	"icons":
+	{
+		"16": "image/icon-16.png",
+		"48": "image/icon-48.png",
+		"128": "image/icon-128.png"
+	},
+	"browser_action": 
+	{
+		"default_icon": "image/icon-16.png",
+		"default_title": "洛基来了",
+		"default_popup": "html/popup.html"
+	},
+	"content_scripts": 
+	[
+		{
+			"matches": ["http://tiyan.oa.com/userApply/create*"],
+			"js": ["js/tiyan-loki.js"],
+			"run_at": "document_start"
+		}
+	],
+	"web_accessible_resources": ["js/tiyan-loki.js"],
+	"homepage_url": "http://tiyan.oa.com"
+}
